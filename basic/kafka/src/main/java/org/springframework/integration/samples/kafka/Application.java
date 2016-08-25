@@ -180,7 +180,7 @@ public class Application {
 			ZkUtils zkUtils = new ZkUtils(new ZkClient(this.zkConnect, 6000, 6000,
 				ZKStringSerializer$.MODULE$), null, false);
 			try {
-				AdminUtils.createTopic(zkUtils, topic, 1, 1, new Properties());
+				AdminUtils.createTopic(zkUtils, topic, 1, 1, new Properties(), null);
 			}
 			catch (TopicExistsException e) {
 				// no-op
